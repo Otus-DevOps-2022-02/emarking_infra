@@ -12,15 +12,15 @@ jobs:
 
     steps:
     - name: Checkout this repo
-       uses: actions/checkout@v2
-       with:
-       ref: ${{ github.ref }}
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.ref }}
     - name: Checkout repo with tests
-       uses: actions/checkout@v2
-       with:
-       repository: "express42/otus-homeworks"
-       ref: 2022-02
-       path: "./otus-homeworks/"
+      uses: actions/checkout@v2
+      with:
+        repository: "express42/otus-homeworks"
+        ref: 2022-02
+        path: "./otus-homeworks/"
 
     - name: Run tests
       run: curl https://raw.githubusercontent.com/express42/otus-homeworks/2022-02/run.sh | bash
