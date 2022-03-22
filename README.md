@@ -15,6 +15,10 @@ TASK REPORT: Home Work Lesson 5
 
     Example: ssh -i ~/.ssh/somekey username@host
 
+    Also we can use ssh ProxyCommand:
+
+    ssh -i  ~/.ssh/somekey -0 ProxyCommand="ssh -W %h:%p $IpProxyHost" username@DestanationHost
+    *You can add ProxyCommand settings to config file stored in ~/.ssh/
 
 ##TASK0002:Research how to create an alias for ssh connection
 
@@ -26,6 +30,7 @@ TASK REPORT: Home Work Lesson 5
 		UserName example.com --IP or DNS name of remote Host
 		Port  0000 --Port number
 		IdentityFIle ~/.ssh/id_rsa_remotesystem
+		ProxyCommand ssh $IpProxyHost -W %h:%p
 
 ###TASK0003:Provide existing private and public ip addresses of deployed servers
 
