@@ -30,4 +30,5 @@ TASK REPORT: Home Work Lesson 5
 ###TASK0003:Provide existing private and public ip addresses of deployed servers
 
    bastion_IP = 62.84.124.81
+
    someinternalhost_IP = 192.168.1.25
