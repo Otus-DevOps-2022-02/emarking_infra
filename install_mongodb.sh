@@ -1,7 +1,9 @@
 #!/bin/bash
 
 #This is script to automate install mogoDb server
+sudo apt-get install -y apt-transport-https ca-certificates
 
+sleep 2
 
 lsb_release -c | while read line
 
