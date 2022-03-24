@@ -6,9 +6,6 @@
 
 cd /usr/local/src/
 
-sudo apt-get updte
-
-sudo apt-get install git
 
 git clone -b monolith https://github.com/express42/reddit.git
 
