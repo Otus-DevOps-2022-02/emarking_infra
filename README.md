@@ -37,3 +37,8 @@ TASK REPORT: Home Work Lesson 5
    bastion_IP = 62.84.124.81
 
    someinternalhost_IP = 192.168.1.25
+
+TASK REPORT: HOME WORK 6
+
+testapp_IP = 51.250.66.5
+testapp_port = 9292
