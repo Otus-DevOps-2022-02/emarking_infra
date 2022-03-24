@@ -40,5 +40,5 @@ TASK REPORT: Home Work Lesson 5
 
 TASK REPORT: HOME WORK 6
 
-testapp_IP = 51.250.66.5
+testapp_IP = 51.250.4.149
 testapp_port = 9292
