@@ -18,12 +18,13 @@ packages:
     - git
     - apt-transport-https
     - ca-certificates
+
 runcmd:
-    - [ sudo, mkdir, /home/admin/inst ]
+    - [ mkdir, /home/admin/inst ]
     - [ cd, /home/admin/inst ]
-    - [ wget, https://raw.githubusercontent.com/Otus-DevOps-2022-02/emarking_infra/cloud-testapp/install_mongodb.sh ]
-    - [ wget, https://raw.githubusercontent.com/Otus-DevOps-2022-02/emarking_infra/cloud-testapp/install_ruby.sh ]
-    - [ wget, https://raw.githubusercontent.com/Otus-DevOps-2022-02/emarking_infra/cloud-testapp/deploy.sh ]
+    - [ wget, raw.githubusercontent.com/Otus-DevOps-2022-02/emarking_infra/cloud-testapp/install_mongodb.sh ]
+    - [ wget, raw.githubusercontent.com/Otus-DevOps-2022-02/emarking_infra/cloud-testapp/install_ruby.sh ]
+    - [ wget, raw.githubusercontent.com/Otus-DevOps-2022-02/emarking_infra/cloud-testapp/deploy.sh ]
     - [ chmod, +x, install_mongodb.sh ]
     - [ chmod, +x, install_ruby.sh ]
     - [ chmod, +x, deploy.sh ]
