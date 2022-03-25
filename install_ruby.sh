@@ -4,14 +4,7 @@
 
 
 echo "Starting to install Ruby env....."
-sleep 5
 
-sudo apt install -y ruby-full ruby-bundler build-essential
+sudo apt-get --assume-yes update
 
-rv=`ruby -v`
-
-echo "Your ruby version is: $rv"
-
-bv=`bundler -v`
-
-echo "Your bundler version is: $bv"
+sudo ap-get install -y ruby-full ruby-bundler build-essential
