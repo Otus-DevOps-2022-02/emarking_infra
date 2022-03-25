@@ -1,5 +1,5 @@
-TASK REPORT: Home Work Lesson 5
 
+TASK REPORT: Home Work Lesson 5
 
 #TASK0001:Research how to connect to host  using only one command
 
@@ -38,24 +38,18 @@ TASK REPORT: Home Work Lesson 5
 
    someinternalhost_IP = 192.168.1.25
 
+#################################################################################
+
 TASK REPORT: HOME WORK 6
 
-#TASK001: Create bash scripts for installing environment and deploy ruby app
+#TASK001: Create bash scripts for installing envirovment and deploy ruby app
 
-
-   install_ruby.sh - Makes install the Ruby env
+   autodeploy.sh - Creates new instance in Yandex cloud
+   metadata.yaml - Metadata for autodeploy.sh
+   install_ruby.sh - Makes install the Ruby env.
    install_mongodb.sh - Makes install mongodb-org packeges
    deploy.sh - Makes deploy Ruby APP
 
-
-#TASK002: Create cripts for auto depoyng Ruby app in YC instance
-
-     autodeploy.sh - Creates new instance, instaling all neccery packeges
-                     and make start ruby app in Yandex cloud
-     metadata.yaml - Metadata for autodeploy.sh
-
-
-#TASK003: Provide public ip address and tcp port number where ruby app is running
 
 testapp_IP = 51.250.2.185
 testapp_port = 9292
