@@ -74,7 +74,7 @@ TASK REPORT: HOME WORK 7
 #TASK002 Build Packer image with preinstalled Ruby and MongoDb
 
       1.Created ubuntu16.json file with all neccery settings
-      2.Created varibles.json file with varibles for build file
+      2.Created varibles.json file with variables for build file
       3.Reworked bash scipts install.ruby.sh and install_mongodb.sh
       4.Created  image with preinstalled Ruby and MongoDb
 
