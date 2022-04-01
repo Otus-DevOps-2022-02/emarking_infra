@@ -46,7 +46,7 @@
 
 	{
 	     "type":"shell",
-	     "script": "scripts/deploy.sh",
+	     "script": "files/deploy.sh",
              "execute_command": "sudo {{.Path}}"
 
 	}
