@@ -22,7 +22,13 @@
             "platform_id": "standard-v3",
 	    "subnet_id": "e9bq2oe6jsaapniab33p",
             "use_ipv4_nat": true,
-	     "disk_type": "network-ssd"
+	     "disk_type": "network-ssd",
+
+             "instance_cores": 2,
+	     "instance_mem_gb": 4,
+	     "preemptible": true
+
+
         }
     ],
 
@@ -36,6 +42,13 @@
             "type": "shell",
             "script": "/home/asd/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
-        }
+        },
+
+	{
+	     "type":"shell",
+	     "script": "/home/asd/deploy.sh",
+             "execute_command": "sudo {{.Path}}"
+
+	}
     ]
 }
