@@ -45,7 +45,7 @@ resource "yandex_compute_instance" "app" {
     host        = self.network_interface.0.nat_ip_address
     agent       = false
     user        = "ubuntu"
-    private_key = file("~/.ssh/admin")
+    private_key = var.public_key_path
   }
 
   metadata = {
