@@ -35,9 +35,7 @@ module "app" {
   host            = module.app.external_ip_address_app[0]
   run_prv         = var.run_prv
   env_type        = var.env_type
-#  depends_on = [
-#    module.db
-#  ]
+
 
 }
 module "db" {
