@@ -57,7 +57,7 @@ resource "null_resource" "db" {
     ]
 
   }
-  depends_on = [
-    yandex_compute_instance.db
-  ]
+#  depends_on = [
+#    yandex_compute_instance.db
+#  ]
 }

@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-}
-
 resource "yandex_compute_instance" "app" {
   name        = "reddit-app-${count.index}-${var.env_type}"
   platform_id = "standard-v3"
@@ -70,7 +62,7 @@ resource "null_resource" "app" {
     ]
 
   }
-  depends_on = [
-    yandex_compute_instance.app
-  ]
+#  depends_on = [
+#    yandex_compute_instance.app
+#  ]
 }

@@ -1,8 +1,0 @@
-cloud_id        = "b1g8fd7t7ngogsno9orj"
-folder_id       = "b1gjs8uoo12oe6e1hh5v"
-zone_id         = "ru-central1-a"
-public_key_path = "~/.ssh/admin.pub"
-service_acc_key = "key.json"
-image_id        = "fd8oino4d914g766eijl"
-subnet_id       = "e9bq2oe6jsaapniab33p"
-inst_count      = 2
