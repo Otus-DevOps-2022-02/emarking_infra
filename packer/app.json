@@ -23,7 +23,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "/home/asd/hwp/install_ruby.sh",
+            "script": "scripts/install_ruby.sh",
             "execute_command": "sudo {{.Path}}"
         }
 

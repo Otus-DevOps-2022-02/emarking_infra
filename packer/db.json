@@ -24,7 +24,7 @@
 
     {
         "type": "shell",
-        "script": "/home/asd/hwp/install_mongodb.sh",
+        "script": "scripts/install_mongodb.sh",
         "execute_command": "sudo {{.Path}}"
     }
 ]
