@@ -1,0 +1,12 @@
+cloud_id        = "b1g8fd7t7ngogsno9o"
+folder_id       = "b1gjs8uoo12oe6e1hh"
+zone_id         = "ru-central1-a"
+public_key_path = "~/.ssh/appuser.pub"
+service_acc_key = "key.json"
+image_id        = "fd8oino4d914g766eijl"
+subnet_id       = "e9bq2oe6jsaapniab33p"
+inst_count      = 1
+app_disk_image  = "fd8emsg34ccj938f7f1g"
+db_disk_image   = "fd8ujteeqigvescv6enf"
+env_type        = "prod"
+db_ip           = "0.0.0.0"

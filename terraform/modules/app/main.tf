@@ -62,7 +62,5 @@ resource "null_resource" "app" {
     ]
 
   }
-#  depends_on = [
-#    yandex_compute_instance.app
-#  ]
+
 }
