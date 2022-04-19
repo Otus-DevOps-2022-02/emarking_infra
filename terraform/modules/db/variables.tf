@@ -40,15 +40,12 @@ variable "env_type" {
   description = "Env type for instance"
   default     = "prod"
 }
-variable "db_ip" {
-  description = "db ip"
-  default     = "localhost"
-}
 
 variable "run_prv" {
   description = "Run provisionong"
   default     = "0"
 }
+
 
 variable "host" {
   description = "Run provisionong HOST"

@@ -38,7 +38,7 @@ variable "db_disk_image" {
 }
 variable "env_type" {
   description = "Env type for instance"
-  default     = "prod"
+  default     = "stage"
 }
 variable "db_ip" {
   description = "db ip"
@@ -48,9 +48,4 @@ variable "db_ip" {
 variable "run_prv" {
   description = "Run provisionong"
   default     = "0"
-}
-
-variable "host" {
-  description = "Run provisionong HOST"
-  default     = "localhost"
 }

@@ -1,9 +1,9 @@
 variable "cloud_id" {
-  default = "b1g8fd7t7ngogsno9orj"
+  default = "b1g8fd7t7ngogsno9"
 }
 
 variable "folder_id" {
-  default = "b1gjs8uoo12oe6e1hh5v"
+  default = "b1gjs8uoo12oe6e1"
 }
 
 variable "zone_id" {
@@ -11,7 +11,7 @@ variable "zone_id" {
 }
 
 variable "public_key_path" {
-  default = "~/ssh/admin.pub"
+  default = "~/ssh/appuser.pub"
 
 }
 variable "service_acc_key" {
@@ -40,6 +40,7 @@ variable "env_type" {
   description = "Env type for instance"
   default     = "prod"
 }
+
 variable "db_ip" {
   description = "db ip"
   default     = "localhost"
