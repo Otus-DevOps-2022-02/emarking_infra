@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-inventory -i inst_all_st.tpl --list | tee inventory.json
+ansible-inventory -i inst_all_st.ini --list | tee inventory.json

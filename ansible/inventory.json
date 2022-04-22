@@ -1,17 +1,11 @@
 {
     "_meta": {
         "hostvars": {
-            "app-0-stage": {
-                "ansible_host": "51.250.66.242"
+            "app-stage-server": {
+                "ansible_host": "51.250.78.228"
             },
-            "app-1-stage": {
-                "ansible_host": "51.250.77.246"
-            },
-            "db-0-stage": {
-                "ansible_host": "51.250.84.14"
-            },
-            "db-1-stage": {
-                "ansible_host": "51.250.5.115"
+            "db-stage-server": {
+                "ansible_host": "51.250.78.200"
             }
         }
     },
@@ -24,14 +18,12 @@
     },
     "app-stage": {
         "hosts": [
-            "app-0-stage",
-            "app-1-stage"
+            "app-stage-server"
         ]
     },
     "db-stage": {
         "hosts": [
-            "db-0-stage",
-            "db-1-stage"
+            "db-stage-server"
         ]
     }
 }
