@@ -13,7 +13,7 @@
         "children": [
             "app-stage",
             "db-stage",
-            "ungrouped"
+
         ]
     },
     "app-stage": {
