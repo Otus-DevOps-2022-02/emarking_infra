@@ -13,7 +13,7 @@
         "children": [
             "app",
             "db",
-            "ungrouped"
+
         ]
     },
     "app": {

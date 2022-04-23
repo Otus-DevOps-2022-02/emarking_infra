@@ -46,7 +46,7 @@ resource "null_resource" "db" {
     host        = var.host
     agent       = false
     user        = "ubuntu"
-    private_key = file("~/.ssh/appuser")
+    private_key = ${file(var.public_key_path)}
   }
 
   provisioner "remote-exec" {
