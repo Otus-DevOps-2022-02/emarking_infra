@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-inventory -i instventory --list | tee inventory.json
+ansible-inventory -i inventory --list | tee inventory.json
