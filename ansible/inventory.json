@@ -1,29 +1,29 @@
 {
     "_meta": {
         "hostvars": {
-            "app-stage-server": {
+            "appserver": {
                 "ansible_host": "51.250.78.228"
             },
-            "db-stage-server": {
+            "dbserver": {
                 "ansible_host": "51.250.78.200"
             }
         }
     },
     "all": {
         "children": [
-            "app-stage",
-            "db-stage",
+            "app",
+            "db",
             "ungrouped"
         ]
     },
-    "app-stage": {
+    "app": {
         "hosts": [
-            "app-stage-server"
+            "appserver"
         ]
     },
-    "db-stage": {
+    "db": {
         "hosts": [
-            "db-stage-server"
+            "dbserver"
         ]
     }
 }
