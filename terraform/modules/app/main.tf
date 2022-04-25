@@ -40,7 +40,7 @@ resource "null_resource" "app" {
     host        = var.host
     agent       = false
     user        = "ubuntu"
-    private_key = file("~/.ssh/appuser")
+    private_key = var.public_key_path
   }
 
   provisioner "file" {

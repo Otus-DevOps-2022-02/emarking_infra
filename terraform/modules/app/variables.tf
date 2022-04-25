@@ -11,7 +11,7 @@ variable "zone_id" {
 }
 
 variable "public_key_path" {
-  default = "~/ssh/appuser.pub"
+  default = ""
 
 }
 variable "service_acc_key" {
