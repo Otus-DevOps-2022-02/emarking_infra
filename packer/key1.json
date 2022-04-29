@@ -3,6 +3,6 @@
    "service_account_id": "ajefsjf2ehi09fvc7i6p",
    "created_at": "2022-03-28T11:00:11.956210907Z",
    "key_algorithm": "RSA_2048",
-   "public_key": "-----BEGIN PUBLIC KEY-----\,
-   "purivate_key": "-----BEGIN PUBLIC KEY-----\
+   "public_key": "-----BEGIN PUBLIC KEY-----\n ",
+   "purivate_key": "-----BEGIN PUBLIC KEY-----\n"
 }
