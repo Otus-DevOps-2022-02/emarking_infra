@@ -1,0 +1,75 @@
+---
+
+- name : Configure host & deply app
+  hosts: all
+  vars:
+    mongo_bind_ip: 0.0.0.0
+    db_host : 51.250.81.5
+  tasks:
+    - name:  Change mongo DB config file
+      become: true
+      template:
+        src: templates/mongodb.conf.j2
+        dest: /etc/mongod.conf
+        mode: 0644
+      tags: db-tag
+      notify: restart mongod
+
+    - name: Delete if exist
+      file:
+        state: absent
+        path: /home/ubuntu/reddit
+      tags: deploy-tag
+
+    - name: install git
+      become: true
+      apt:
+        name: git
+        state: present
+      tags: deploy-tag
+
+    - name: Fetch the last version of application code
+      git:
+        repo: 'https://github.com/express42/reddit.git'
+        dest: /home/ubuntu/reddit
+        version: monolith
+      tags: deploy-tag
+      notify: reload-puma
+
+    - name: Bundler install
+      bundler:
+        state: present
+        chdir: /home/ubuntu/reddit
+      tags: deploy-tag
+
+    - name: Add unit file for app
+      become: true
+      copy:
+        src: files/puma.service
+        dest: /etc/systemd/system/puma.service
+      tags: app-tag
+      notify: reload-puma
+
+    - name: Add config file for puma
+      template:
+        src: templates/db_config.j2
+        dest: /home/ubuntu/db_config
+        mode: 0644
+      tags: app-tag
+
+    - name: Enable puma
+      become: true
+      systemd: name=puma enabled=yes daemon_reload=yes
+      tags: app-tag
+
+
+
+  handlers:
+    - name: restart mongod
+      become: true
+      service: name=mongod state=restarted
+      tags: db-tag
+
+    - name: reload-puma
+      become: true
+      systemd: name=puma state=restarted

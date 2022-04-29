@@ -7,3 +7,4 @@ packer/varibles.json
 *.tf.save
 key.json
 .terraform/
+*.retry
