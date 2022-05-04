@@ -3,14 +3,12 @@
 - name: Show env nanme
   debug:
     msg: "This is {{ env }} env"
-
 - name: Add unit file for app
   become: true
   copy:
     src: puma.service
     dest: /etc/systemd/system/puma.service
   notify: reload-puma
-
 - name: Add config file for puma
   template:
     src: db_config.j2
@@ -18,7 +16,6 @@
     mode: 0644
     owner: ubuntu
     group: ubuntu
-     
 - name: Enable puma
   become: true
-  systemd: daemon_reload=yes name=puma enabled=yes 
+  systemd: daemon_reload=yes name=puma enabled=yes
