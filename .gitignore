@@ -8,3 +8,4 @@ packer/varibles.json
 .terraform/
 *.retry
 key.json
+jdauphant.nginx
