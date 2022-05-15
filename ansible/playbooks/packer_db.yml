@@ -2,33 +2,6 @@
 - name: Installing MOGODB on instance
   become: true
   hosts: default
-  tasks:
-   - name: Installing pre-req
-     apt:
-      update_cache:  yes
-      name:
-      - apt-transport-https
-      - ca-certificates
-      state: present
 
-   - name: Add APT-KEY
-     apt_key:
-      url: https://www.mongodb.org/static/pgp/server-4.2.asc
-      state: present
-
-   - name: Add mogodb repository into source List
-     apt_repository:
-      repo: deb  https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
-      state: present
-
-   - name: Install MobgoDB Database
-     apt:
-      update_cache: yes
-      name: mongodb-org
-      state: present
-
-   - name: Enabling service MobgoDB
-     systemd:
-      name: mongod
-      enabled: yes
-      state: started
+  roles:
+   - db

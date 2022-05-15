@@ -26,7 +26,14 @@
         {
             "type": "ansible",
             "user": "ubuntu",
-            "playbook_file" : "./ansible/playbooks/packer_app.yml"
+            "playbook_file" : "/home/eugene/lerning/stage/ansible_main/playbooks/packer_app.yml",
+            "extra_arguments": [
+                "--tags",
+                "ruby"
+            ],
+            "ansible_env_vars": [ "ANSIBLE_ROLES_PATH=/home/eugene/lerning/stage/ansible_main/roles", "ANSIBLE_HOST_KEY_CHECKING = false"  ],
+            "use_proxy": false
+
 
         }
 
