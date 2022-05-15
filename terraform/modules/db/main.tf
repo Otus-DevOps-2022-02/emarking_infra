@@ -3,6 +3,9 @@ terraform {
     yandex = {
       source = "yandex-cloud/yandex"
     }
+    local = {
+      source = "hashicorp/local"
+    }
   }
 }
 
@@ -91,23 +94,35 @@ resource "local_file" "get_inst_data_stage" {
 
   })
 
-  filename = "../stage/inst_db_st.tpl"
+  filename = "../${var.env_type}/inst_db_${var.env_type}"
+
+
+
+}
+
+resource "null_resource" "templates" {
+
+  triggers = {
+
+    env_type = var.env_type
+  }
+
 
   provisioner "local-exec" {
 
     when       = destroy
-    command    = "mv ../stage/inst_db_st.tpl ../stage/inst_db_st.tpl.back | mv ../stage/inst_all_st.tpl ../stage/inst_all_st.tpl.back"
+    command    = "mv ../${self.triggers.env_type}/inst_db_${self.triggers.env_type} ../${self.triggers.env_type}/inst_db_${self.triggers.env_type}.back | mv ../${self.triggers.env_type}/inst_all_${self.triggers.env_type} ../${self.triggers.env_type}/inst_all_${self.triggers.env_type}.back"
     on_failure = continue
 
   }
-
   provisioner "local-exec" {
     when = create
 
-    command = "touch ../stage/inst_all_st.tpl | cat ../stage/inst_db_st.tpl | tee -a ../stage/inst_all_st.tpl"
+    command = "touch ../${self.triggers.env_type}/inst_all_${self.triggers.env_type} | cat ../${self.triggers.env_type}/inst_db_${self.triggers.env_type} | tee -a ../${self.triggers.env_type}/inst_all_${self.triggers.env_type}"
 
     on_failure = continue
 
   }
+
 
 }

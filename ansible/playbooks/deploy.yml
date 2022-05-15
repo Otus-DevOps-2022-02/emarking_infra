@@ -1,6 +1,6 @@
 ---
 - name : Deploy APP host & deploy app
-  hosts: app-stage
+  hosts: app
   vars:
     db_host : 51.250.84.102
   tasks:

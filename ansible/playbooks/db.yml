@@ -1,0 +1,8 @@
+---
+
+- name : Configure DB host & deply app
+  hosts: db
+  become: true
+
+  roles:
+   - db
