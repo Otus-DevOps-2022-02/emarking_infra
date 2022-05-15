@@ -3,6 +3,5 @@
 - name: Show env nanme
   debug:
     msg: "This is {{ env }} env"
-
 - include: install_mongo.yml
 - include: config_mongo.yml
