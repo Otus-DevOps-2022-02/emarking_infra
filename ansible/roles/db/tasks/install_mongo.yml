@@ -1,6 +1,6 @@
 ---
 - name: Installing pre-req
-  ansible.builtin.apt:
+  apt:
     update_cache:  yes
     name:
       - apt-transport-https
@@ -8,23 +8,23 @@
     state: present
     tags: install
 - name: Add APT-KEY
-  ansible.builtin.apt_key:
+  apt_key:
       url: https://www.mongodb.org/static/pgp/server-4.2.asc
       state: present
   tags: install
 - name: Add mogodb repository into source List
-  ansible.builtin.apt_repository:
+  apt_repository:
       repo: deb  https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
       state: present
   tags: install
 - name: Install MobgoDB Database
-  ansible.builtin.apt:
+  apt:
       update_cache: yes
       name: mongodb-org
       state: present
   tags: install
 - name: Enabling service MobgoDB
-  ansible.builtin.systemd:
+  systemd:
       name: mongod
       enabled: yes
       state: started

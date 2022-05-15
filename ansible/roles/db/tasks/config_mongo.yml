@@ -1,6 +1,6 @@
 ---
 - name:  Change mongo DB config file
-  ansible.builtin.template:
+  template:
       src: mongodb.conf.j2
       dest: /etc/mongod.conf
       mode: 0644
