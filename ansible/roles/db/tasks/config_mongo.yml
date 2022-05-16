@@ -1,0 +1,9 @@
+---
+- name:  Change mongo DB config file
+  template:
+      src: mongodb.conf.j2
+      dest: /etc/mongod.conf
+      mode: 0644
+      owner: ubuntu
+      group: ubuntu
+  notify: restart mongod

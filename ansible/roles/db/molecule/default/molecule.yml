@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+lint: |
+  set -e
+  ansible-lint
+  yamllint .
+platforms:
+  - name: instance
+    box: ubuntu/xenial64
+provisioner:
+  name: ansible
+verifier:
+  name: testinfra

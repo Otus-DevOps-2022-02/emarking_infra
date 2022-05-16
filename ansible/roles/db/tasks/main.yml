@@ -3,12 +3,5 @@
 - name: Show env nanme
   debug:
     msg: "This is {{ env }} env"
-
-- name:  Change mongo DB config file
-  template:
-      src: mongodb.conf.j2
-      dest: /etc/mongod.conf
-      mode: 0644
-      owner: ubuntu
-      group: ubuntu
-  notify: restart mongod
+- include: install_mongo.yml
+- include: config_mongo.yml

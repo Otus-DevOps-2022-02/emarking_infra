@@ -1,0 +1,10 @@
+---
+- name: Installing Rubby and Bundler
+  become: true
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - software-properties-common
+    - ruby-full
+    - ruby-bundler
+    - build-essential
+  tags: ruby

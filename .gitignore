@@ -9,3 +9,9 @@ packer/varibles.json
 *.retry
 key.json
 jdauphant.nginx
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
